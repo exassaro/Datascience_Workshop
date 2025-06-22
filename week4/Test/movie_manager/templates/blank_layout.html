@@ -1,0 +1,10 @@
+{%  load static %}
+
+<h1>Movie project
+    <img src="{% static 'images/Logo.jpg' %}"
+</h1>
+{% include 'menu.html' %} <!-- to include another html page contets -->
+{% block content %}
+<p>you content here </p>  <!-- block to override -->
+{% endblock content %}
+    

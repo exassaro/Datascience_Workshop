@@ -1,0 +1,10 @@
+
+{% for movie_obj in movies %}
+<h1>Title:{{movie_obj.title | upper}}</h1> <!--variables-->
+<p>Year:{{movie_obj.year | default:"No data available"}}</p> <!--default filter-->
+{% if movie_obj.Success %}<!--tags-->
+<p>Movie was hit <p>
+{% else %}
+<p>Movie was flop<p>
+{% endif %}
+{% endfor %}

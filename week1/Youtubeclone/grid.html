@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grid practice</title>
+    </head>
+    <body style="padding-bottom: 1000px;">
+        <div style="
+        display: grid;
+        grid-template-columns:100px 100px;
+        ">
+            <div style="background-color: lightblue;">Div1</div>
+            <div style="background-color: lightpink;">Div2 <p>text</p></div>
+        </div>
+
+
+        <div style="
+            margin-top:10px;
+            display: grid;
+            grid-template-columns:100px 100px 200px;
+            ">
+                <div style="background-color: lightblue;">Div1 100px</div>
+                <div style="background-color: lightpink;">Div2 100px <p>text</p></div>
+                <div style="background-color: lightblue;">Div3 200px</div>
+                <div style="background-color: lightpink;">Div4 100px</div>
+        </div>     
+        <div style="
+            margin-top:10px;
+            display: grid;
+            grid-template-columns:100px 1fr;
+            ">
+                <div style="background-color: lightblue;">Div1 100px</div>
+                <div style="background-color: lightpink;">Div2 1 free space</div>
+        </div>   
+        <div style="
+            margin-top:10px;
+            display: grid;
+            grid-template-columns:100px 1fr 1fr;
+            ">
+                <div style="background-color: lightblue;">Div1 100px</div>
+                <div style="background-color: lightpink;">Div2 1 free space</div>
+                <div style="background-color: lightblue;">Div 3 1fr</div>
+        </div>   
+        <div style="
+            margin-top:10px;
+            display: grid;
+            grid-template-columns:1fr 1fr 1fr;
+            column-gap:20px;
+            row-gap:40px;
+            ">
+                <div style="background-color: lightblue; height:200px; ">Div1 1fr</div>
+                <div style="background-color: lightpink; height:200px;">Div2 1 free space</div>
+                <div style="background-color: lightblue; height:200px;">Div 3 1fr</div>
+                <div style="background-color: lightpink; height:200px;">Div4 1 free space</div>
+                <div style="background-color: lightblue; height:200px;">Div 5 1fr</div>
+                <div style="background-color: lightpink; height:200px;">Div6 1 free space</div>
+        </div>  
+    </body>
+</html>

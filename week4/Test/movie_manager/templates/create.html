@@ -1,0 +1,12 @@
+
+{% extends 'blank_layout.html' %} <!-- inheritance f -->
+{% block content %}
+<h1>Create</h1> <!-- override -->
+<form method="post" enctype="multipart/form-data"><!-- method post,pu,get  form type -->
+        {% csrf_token %}
+    Title: <input type="text" name="title"/><br>
+    Year: <input type="text" name="year"/><br>
+    <button type="submit">Create</button>
+</form>
+{% endblock content %}
+        

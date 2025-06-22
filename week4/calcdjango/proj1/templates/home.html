@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Hello world</p>
+    <form action="{% url 'add' %}" method="POST">
+        {% csrf_token %}
+        <br>
+        <label for="num1">First number</label>
+        <input type="number" name="num1" placeholder="num1" id="num1">
+        <br>
+        <label for="num2">Second number</label>
+        <input type="number" name="num2" placeholder="num2" id="num2">
+        <br>
+        <button type="submit">Enter</button>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+
+        <tr>
+            <th>Field</th>
+            <th>data</th>
+        </tr>
+
+        {% for User in users %}
+
+        <tr>
+            <td>Username</td>
+            <td>{{ User.username }}</td>
+        </tr>
+        {% comment %} <tr>
+            <td>password</td>
+            <td>{{ User.password }}</td>
+        </tr> {% endcomment %}
+        <tr>
+            <td>email</td>
+            <td>{{ User.email }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</body>
+</html>

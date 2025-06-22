@@ -1,0 +1,68 @@
+.navbarshop{
+    background-color: white;
+    margin:10px 20px;
+    padding: 10px;
+}
+.navbarshop p{
+    color: black;
+    position: fixed;
+    font-weight: 700;
+    font-size: 20px;
+    
+}
+.navboximgs{
+    display: flex;
+    overflow-x: auto;
+    margin-top: 10px;
+    margin-top: 50px;
+}
+.img{
+    margin: 0 10px;
+}
+
+.nested-card{
+    display: flex;
+    max-width: 350px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+
+}
+.cardnested p{
+    font-size: 12px;
+    margin-top: 0;
+}
+
+.card-prod{
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    justify-content: space-evenly;
+}
+
+.cardheader{
+    font-size: 20px;
+    margin-left: 25px;
+}
+.cardbut{
+    font-size: 14px;
+    align-self: flex-start;
+    margin-left: 25px;
+    margin-bottom: 15px;
+    margin-top: 0;
+    color:rgb(2, 162, 180);
+
+}
+
+
+.cardnested img{
+    height: 102px;
+    width: 128px;
+    object-fit: cover;
+}

@@ -1,0 +1,27 @@
+dic1={'a':21,'b':32}
+dic2={'c':31,'a':10}
+for i,j in dic2.items():
+    if i in dic1:
+        dic1[i]=dic1[i]+ j
+    else:
+        dic1[i]=j
+print(dic1)
+
+
+# dic1 = {'a': 21, 'b': 32}
+# dic2 = {'c': 31, 'a': 10}
+
+# new_dict={key:dic1.get(key,0) + dic2.get(key,0) for key in set(dic1)|set(dic2) }
+
+# print(new_dict)
+
+# a = {'a':1, 'b':3, 'c':4}
+# b = {'d':5, 'e':7, 'b':2, 'a':2}
+
+# for key in b:
+#     if key in a:
+#         b[key]=b[key]+a[key]
+    
+# c=a|b
+# print(c)
+

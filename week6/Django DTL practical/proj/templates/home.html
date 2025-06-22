@@ -1,0 +1,18 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+    <p>Hello World</p>
+    
+    {% for k,v in dict.items %}
+    <p>{{k}}:{{v}}</p>
+    {% endfor %}
+    {% if data %}
+        <p>The list contains the following numbers:</p>
+        {% for i in data %}
+            <p>{{ i }}</p>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,14 @@
+def bfs(self, start):
+        """Performs Breadth-First Search (BFS) traversal."""
+        visited = set()
+        queue = [start]
+
+        print("\nBFS Traversal:")
+        while queue:
+            curr = queue.pop(0)
+            if curr not in visited:
+                print(curr, end=" ")
+                visited.add(curr)
+                for neighbor, exists in enumerate(self.matrix[curr]):
+                    if exists and neighbor not in visited:
+                        queue.append(neighbor)

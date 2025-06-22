@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Background to Red</title>
+</head>
+<body>
+  <h1>Click the Button to Change Background Color to Red</h1>
+  <button id="colorButton">Change to Red</button>
+
+  <script>
+    const button = document.getElementById("colorButton");
+
+    // Add click event listener to the button
+    button.addEventListener("click", () => {
+      // Change the background color of the body to red
+      document.body.style.backgroundColor = "red";
+    });
+  </script>
+</body>
+</html>

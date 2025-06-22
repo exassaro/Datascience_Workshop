@@ -1,0 +1,400 @@
+
+To create database
+postgres=# CREATE DATABASE week6
+postgres-# ;
+CREATE DATABASE
+postgres=#
+
+'
+to connect to database
+postgres=# \c week6
+You are now connected to database "week6" as user "postgres".
+week6=#
+
+Creating table
+week6=# CREATE TABLE employee (
+week6(# emp_id BIGSERIAL NOT NULL PRIMARY KEY,
+week6(# first_name VARCHAR(50) NOT NULL,
+week6(# last_name VARCHAR(50) NOT NULL,
+week6(# salary NUMERIC(10,2) NOT NULL
+week6(# );
+CREATE TABLE
+
+
+Adding values to table
+week6=# INSERT INTO employee (first_name,last_name,salary)
+week6-# VALUES
+week6-# ('Jhon','Doe',6000.20),
+week6-# ('Jane', 'Smith', 75000.00),
+week6-#     ('Michael', 'Brown', 50000.00),
+week6-#     ('Emily', 'Davis', 80000.00),
+week6-#     ('Robert', 'Wilson', 55000.00);
+
+Display table
+week6=# SELECT * FROM employee
+week6-# ;
+ emp_id | first_name | last_name |  salary
+--------+------------+-----------+----------
+      1 | Jhon       | Doe       |  6000.20
+      2 | Jane       | Smith     | 75000.00
+      3 | Michael    | Brown     | 50000.00
+      4 | Emily      | Davis     | 80000.00
+      5 | Robert     | Wilson    | 55000.00
+
+
+create another table with foreign key to employee
+week6=# CREATE TABLE department(
+week6(# id BIGSERIAL PRIMARY KEY,
+week6(# department VARCHAR(100) NOT NULL,
+week6(# department_id INT NOT NULL,
+week6(# FOREIGN KEY (department_id) REFERENCES employee(emp_id));
+CREATE TABLE
+
+
+Insert in department
+week6=# INSERT INTO department(department,department_id)
+week6-# VALUES
+week6-# ('Engineering', 1),
+week6-# ('Marketing', 2),
+week6-#     ('Sales', 3),
+week6-#     ('HR', 4),
+week6-#     ('Finance', 5);
+INSERT 0 5
+
+
+Performing join
+week6=# SELECT * FROM employee e INNER JOIN department d ON e.emp_id = d.department_id;
+ emp_id | first_name | last_name |  salary  | id | department  | department_id
+--------+------------+-----------+----------+----+-------------+---------------
+      1 | Jhon       | Doe       |  6000.20 |  1 | Engineering |             1
+      2 | Jane       | Smith     | 75000.00 |  2 | Marketing   |             2
+      3 | Michael    | Brown     | 50000.00 |  3 | Sales       |             3
+      4 | Emily      | Davis     | 80000.00 |  4 | HR          |             4
+      5 | Robert     | Wilson    | 55000.00 |  5 | Finance     |             5
+(5 rows)
+
+
+aggregate functions
+
+week6=# SELECT COUNT(*) AS total_employees
+week6-# FROM employee;
+ total_employees
+-----------------
+               5
+(1 row)
+
+week6=# SELECT SUM(salary) AS total_salary
+week6-# FROM employee;
+ total_salary
+--------------
+    266000.20
+(1 row)
+
+
+week6=# SELECT AVG(salary) AS average_salary
+week6-# FROM employee;
+   average_salary
+--------------------
+ 53200.040000000000
+(1 row)
+
+
+
+week6=# SELECT MIN(salary) AS min_salary, MAX(salary) AS max_salary
+week6-# FROM employee;
+ min_salary | max_salary
+------------+------------
+    6000.20 |   80000.00
+(1 row)
+
+
+week6=# SELECT
+week6-#     d.department,
+week6-#     SUM(e.salary) AS total_salary
+week6-# FROM
+week6-#     employee e
+week6-# JOIN
+week6-#     department d ON e.emp_id = d.department_id
+week6-# GROUP BY
+week6-#     d.department;
+ department  | total_salary
+-------------+--------------
+ Marketing   |     75000.00
+ Finance     |     55000.00
+ Engineering |      6000.20
+ Sales       |     50000.00
+ HR          |     80000.00
+
+
+week6=# SELECT
+week6-#     d.department,
+week6-#     SUM(e.salary) AS total_salary
+week6-# FROM
+week6-#     employee e
+week6-# JOIN
+week6-#     department d ON e.emp_id = d.department_id
+week6-# GROUP BY
+week6-#     d.department
+week6-# HAVING
+week6-#     SUM(e.salary) > 100000;
+ department | total_salary
+------------+--------------
+(0 rows)
+
+
+Where clause
+week6=# SELECT *
+week6-# FROM employee
+week6-# WHERE salary > 50000;
+ emp_id | first_name | last_name |  salary
+--------+------------+-----------+----------
+      2 | Jane       | Smith     | 75000.00
+      4 | Emily      | Davis     | 80000.00
+      5 | Robert     | Wilson    | 55000.00
+(3 rows)
+
+week6=# SELECT e.emp_id, e.first_name, e.last_name, e.salary, d.department
+week6-# FROM employee e
+week6-# JOIN department d ON e.emp_id = d.department_id
+week6-# WHERE (d.department = 'Marketing' OR d.department = 'Sales')
+week6-# AND e.salary > 60000;
+ emp_id | first_name | last_name |  salary  | department
+--------+------------+-----------+----------+------------
+      2 | Jane       | Smith     | 75000.00 | Marketing
+(1 row)
+
+
+
+week6=# SELECT *
+week6-# FROM employee
+week6-# WHERE emp_id IN (1, 3, 5);
+ emp_id | first_name | last_name |  salary
+--------+------------+-----------+----------
+      1 | Jhon       | Doe       |  6000.20
+      3 | Michael    | Brown     | 50000.00
+      5 | Robert     | Wilson    | 55000.00
+(3 rows)
+
+
+week6=# SELECT *
+week6-# FROM employee
+week6-# WHERE first_name LIKE 'J%';
+ emp_id | first_name | last_name |  salary
+--------+------------+-----------+----------
+      1 | Jhon       | Doe       |  6000.20
+      2 | Jane       | Smith     | 75000.00
+(2 rows)
+
+
+week6=# SELECT *
+week6-# FROM employee
+week6-# WHERE salary BETWEEN 40000 AND 80000;
+ emp_id | first_name | last_name |  salary
+--------+------------+-----------+----------
+      2 | Jane       | Smith     | 75000.00
+      3 | Michael    | Brown     | 50000.00
+      4 | Emily      | Davis     | 80000.00
+      5 | Robert     | Wilson    | 55000.00
+(4 rows)
+
+
+
+
+Transaction
+
+week6=# BEGIN;
+BEGIN
+week6=*# UPDATE employee
+week6-*# SET salary = 70000
+week6-*# WHERE emp_id = 1;
+UPDATE 1
+week6=*# UPDATE department
+week6-*# SET department_id = 1
+week6-*# WHERE department = 'Engineering';
+UPDATE 1
+week6=*# COMMIT;
+
+
+week6=# BEGIN;
+BEGIN
+week6=*#
+week6=*# -- First operation
+week6=*# UPDATE employee
+week6-*# SET salary = 80000
+week6-*# WHERE emp_id = 2;
+UPDATE 1
+week6=*#
+week6=*# SAVEPOINT savepoint1;
+SAVEPOINT
+week6=*#
+week6=*# -- Second operation (potential error)
+week6=*# UPDATE employee
+week6-*# SET salary = 90000
+week6-*# WHERE emp_id = 100;  -- This could fail if emp_id doesn't exist
+UPDATE 0
+week6=*#
+week6=*# -- Rollback to savepoint if error occurs
+week6=*# ROLLBACK TO SAVEPOINT savepoint1;
+ROLLBACK
+week6=*#
+week6=*# -- Commit the changes
+week6=*# COMMIT;
+COMMIT
+week6=#
+
+concatenate 2 string 
+
+week6=# SELECT
+week6-#     emp_id,
+week6-#     first_name || ' ' || last_name AS full_name
+week6-# FROM
+week6-#     employee;
+ emp_id |   full_name
+--------+---------------
+      3 | Michael Brown
+      4 | Emily Davis
+      5 | Robert Wilson
+      1 | Jhon Doe
+      2 | Jane Smith
+(5 rows)
+
+week6=# SELECT
+week6-#     emp_id,
+week6-#     CONCAT(first_name, ' ', last_name) AS full_name
+week6-# FROM
+week6-#     employee;
+ emp_id |   full_name
+--------+---------------
+      3 | Michael Brown
+      4 | Emily Davis
+      5 | Robert Wilson
+      1 | Jhon Doe
+      2 | Jane Smith
+(5 rows)
+
+
+Creating view
+week6=# CREATE VIEW employee_department_view AS
+week6-# SELECT
+week6-#     e.emp_id,
+week6-#     CONCAT(e.first_name, ' ', e.last_name) AS full_name,
+week6-#     e.salary,
+week6-#     d.department
+week6-# FROM
+week6-#     employee e
+week6-# JOIN
+week6-#     department d ON e.emp_id = d.department_id;
+CREATE VIEW
+week6=# SELECT * FROM employee_department_view;
+ emp_id |   full_name   |  salary  | department
+--------+---------------+----------+-------------
+      2 | Jane Smith    | 80000.00 | Marketing
+      3 | Michael Brown | 50000.00 | Sales
+      4 | Emily Davis   | 80000.00 | HR
+      5 | Robert Wilson | 55000.00 | Finance
+      1 | Jhon Doe      | 70000.00 | Engineering
+(5 rows)
+
+
+create foreign key after inserting
+
+ALTER TABLE employee
+ADD CONSTRAINT fk_department
+FOREIGN KEY (department_id) REFERENCES department(id);
+
+delete since a reference first delete foreign key
+week6=# DELETE FROM employee
+week6-# WHERE emp_id = 1;
+ERROR:  update or delete on table "employee" violates foreign key constraint "department_department_id_fkey" on table "department"
+DETAIL:  Key (emp_id)=(1) is still referenced from table "department".
+week6=# DELETE FROM department
+week6-# WHERE id=1;
+DELETE 1
+week6=# DELETE FROM employee
+week6-# WHERE emp_id = 1;
+DELETE 1
+
+week6=# SELECT * FROM employee ORDER BY emp_id;
+ emp_id | first_name | last_name |  salary
+--------+------------+-----------+----------
+      2 | Jane       | Smith     | 80000.00
+      3 | Michael    | Brown     | 50000.00
+      4 | Emily      | Davis     | 80000.00
+      5 | Robert     | Wilson    | 55000.00
+(4 rows)
+
+
+
+truncate
+week6=# TRUNCATE TABLE department
+week6-# ;
+TRUNCATE TABLE
+
+TRUNCATE TABLE employee, department CASCADE;
+
+
+
+
+DROP
+
+since foreign key
+week6=# DROP TABLE department CASCADE;
+NOTICE:  drop cascades to view employee_department_view
+DROP TABLE
+
+week6=# DROP TABLE employee;
+DROP TABLE
+
+week6=# \d
+Did not find any relations.
+week6=# \dt
+Did not find any relations.
+week6=#
+
+
+
+drop database
+postgres=# \l
+                                                            List of databases
+   Name    |  Owner   | Encoding | Locale Provider |      Collate       |       Ctype        | Locale | ICU Rules |   Access privileges
+-----------+----------+----------+-----------------+--------------------+--------------------+--------+-----------+-----------------------
+ postgres  | postgres | UTF8     | libc            | English_India.1252 | English_India.1252 |        |           |
+ sample    | postgres | UTF8     | libc            | English_India.1252 | English_India.1252 |        |           |
+ shahin    | postgres | UTF8     | libc            | English_India.1252 | English_India.1252 |        |           |
+ template0 | postgres | UTF8     | libc            | English_India.1252 | English_India.1252 |        |           | =c/postgres          +
+           |          |          |                 |                    |                    |        |           | postgres=CTc/postgres
+ template1 | postgres | UTF8     | libc            | English_India.1252 | English_India.1252 |        |           | =c/postgres          +
+           |          |          |                 |                    |                    |        |           | postgres=CTc/postgres
+ test      | postgres | UTF8     | libc            | English_India.1252 | English_India.1252 |        |           |
+ week6     | postgres | UTF8     | libc            | English_India.1252 | English_India.1252 |        |           |
+(7 rows)
+
+
+postgres=# DROP DATABASE week6
+postgres-# ;
+DROP DATABASE
+postgres=#
+
+
+
+
+
+
+to Avoid error on deletion
+
+CREATE TABLE department (
+    id BIGSERIAL PRIMARY KEY,
+    department VARCHAR(100) NOT NULL,
+    department_id INT NOT NULL,
+    FOREIGN KEY (department_id) REFERENCES employee(emp_id) ON DELETE CASCADE
+);
+
+
+
+
+
+SELECT d.department_name, SUM(s.marks) AS total_marks
+FROM student s
+JOIN department d ON s.department_id = d.id
+GROUP BY d.department_name;
+

@@ -1,0 +1,30 @@
+class Node:
+    def __init__(self,data,next=None):
+        self.data=data
+        self.next=next
+        
+class Sll:
+
+        
+    def display(self):
+        temp=self.head
+        while temp:
+            print(temp.data,end="-->")
+            temp=temp.next
+        print("None")
+        
+    def arr_to_ll(self,arr):
+        if not arr:
+            return None
+        self.head=Node(arr[0])
+        current=self.head
+        for i in arr[1:]:
+            current.next=Node(i)
+            current=current.next
+            
+        
+sll=Sll()
+
+arr=[10,36,46,38]
+sll.arr_to_ll(arr)
+sll.display()

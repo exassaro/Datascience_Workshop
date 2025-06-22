@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <button id="btn">click</button>
+    <p id="text">Hello</p>
+    <script>
+        const button=document.getElementById("btn");
+        const text=document.getElementById("text");
+
+        button.addEventListener('click',function(){
+                text.style.display= 'block'
+        });
+    </script>
+    
+</body>
+</html>

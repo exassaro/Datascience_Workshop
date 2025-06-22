@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Tesla's innovative electric vehicles, cutting-edge clean energy solutions, and groundbreaking technology.">
+    <meta name="keywords" content="Tesla, electric vehicles, clean energy, sustainable cars, Model S, Model 3, Model X, Model Y, solar energy">
+    <meta name="author" content="Muhammed Shahinsha">
+    <meta name="robots" content="index, follow">
+    <title>Tesla-clone</title>
+    <link rel="icon" href="./Assets/tesla-icon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+
+    
+
+
+    <header >
+
+    <!--slider top hover-->
+
+    <div class="blur"></div>
+    <div class="slider-top">
+        <div class="comp" id="Vehicles">
+            <div class="single">
+                <img src="./Assets/Model-3.avif" alt="Model 3">
+                <p>Model 3</p>
+            </div>
+            <div class="single">
+                <img src="./Assets/Model-Y.avif" alt="Model Y">
+                <p>Model Y</p>
+            </div>
+            <div class="single">
+                <img src="./Assets/Model-X.avif" alt="Model X">
+                <p>Model X</p>
+            </div>
+            <div class="single">
+                <img src="./Assets/Model-S.avif" alt="Model S">
+                <p>Model S</p>
+            </div>
+            <div class="single">
+                <img src="./Assets/Cybertruck.avif" alt="Cyber truck" >
+                <p>Cybertruck</p>
+            </div>
+            <div class="single">
+                <img src="./Assets/Last-Cars.avif" alt="Last cars">
+                <p>All Cars</p>
+            </div>
+        </div>
+        <div class="comp" id="Energy">
+            <div class="single">
+                <img src="./Assets/Solar-Panels.avif" alt="Solar panel">
+                <p>Solar Panels</p>
+            </div>
+            <div class="single">
+                <img src="./Assets/Solar-Roofs.avif" alt="Solar roofs">
+                <p>Solar Roofs</p>
+            </div>
+            <div class="single">
+                <img src="./Assets/Powerwall.avif" alt="Power wall">
+                <p>Powerwall</p>
+            </div>
+            <div class="single">
+                <img src="./Assets/Megapack.avif" alt="Single">
+                <p>Megapack</p>
+            </div>
+        </div>
+        <div class="comp" id="Charging">
+            <div class="single">
+                <img src="./Assets/Charging.avif" alt="Charging">
+                <p>Charging</p>
+            </div>
+            <div class="single">
+                <img src="./Assets/Home-Charging.avif" alt="Home charging">
+                <p>Home Charging</p>
+            </div>
+            <div class="single">
+                <img src="./Assets/Supercharging.avif" alt="Super charging">
+                <p>Super Charging</p>
+            </div>
+        </div>
+        <div class="comp" id="Discover">
+            <div class="onne">
+                <h1>Resources</h1>
+                <p>Demo Drive</p>
+                <p>Insurance</p>
+                <p>Military Purchase Program</p>
+                <p>Video Guides</p>
+                <p>Customer Stories</p>
+                <p>Events</p>
+            </div>
+            <div class="onne">
+                <h1>Location Services</h1>
+                <p>Find Us</p>
+                <p>Find a Collision Center</p>
+                <p>Find a Certified Installer</p>
+            </div>
+            <div class="onne">
+                <h1>Company</h1>
+                <p>About</p>
+                <p>Careers</p>
+                <p>Investor Relations</p>
+            </div>
+        </div>
+        <div class="comp" id="Shop">
+            <div class="single">
+                <img src="./Assets/Apparel.avif" alt="Apparel">
+                <p>Apparel</p>
+            </div>
+            <div class="single">
+                <img src="./Assets/Vehicle-Accessories.avif" alt="Vehicle Accesories">
+                <p>Vehical Accessories</p>
+            </div>
+            <div class="single">
+                <img src="./Assets/Charging-Shop.avif" alt="Charging shop">
+                <p>Charging</p>
+            </div>
+            <div class="single">
+                <img src="./Assets/Lifestyle.avif" alt="Lifestyle">
+                <p>Lifestyle</p>
+            </div>
+        </div>
+    </div>
+        
+        <!--Head nav bar-->
+        <div class=" position-fixed container-fluid d-flex justify-content-between align-items-center navbar" id="navigationbar">
+            <nav class="logomain">
+                <a href="" class="logo" >
+                    <svg class="tds-icon tds-icon-logo-wordmark tds-site-logo-icon" viewBox="0 0 342 35" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7m0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7m0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7M308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7"></path></svg>
+                </a>
+            </nav>
+            <nav class=" center desktop d-flex justify-content-center  d-none d-md-none d-lg-block links" >
+                <a href="">Vehicles</a>
+                <a href="">Energy</a>
+                <a href="">Charging</a>
+                <a href="">Discover</a>
+                <a href="">Shop</a>
+                <a href="">We, Robot</a>
+            </nav>
+            <nav class="right d-flex align-items-center">
+                <div class="icons desktop d-none d-md-none d-lg-block">
+                    <i class="fa-regular fa-circle-question"></i>
+                    <i class="fa-solid fa-globe"></i>
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <button class="btn btn-outline-secondary ms-3 d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                    Menu
+                </button>
+            </nav>
+
+            <!--off canvas side bar-->
+
+                <div class=" offcanvas offcanvas-end side-bar" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+                    <div class=" offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <a href="" class="d-block mb-3">Vehicles</a>
+                        <a href="" class="d-block mb-3">Energy</a>
+                        <a href="" class="d-block mb-3">Charging</a>
+                        <a href="" class="d-block mb-3">Discover</a>
+                        <a href="" class="d-block mb-3">Shop</a>
+                        <a href="" class="d-block mb-3">We, Robot</a>
+                        <a href="" class="d-block mb-3">Support</a>
+                    </div>
+                </div>
+        </div>
+        
+    </header>
+    
+    <!--Hero section-->
+    <section style="background-image: url('images/BG-IMG 1.avif');">
+        <div class="content d-grid">
+            <h1>Model 3</h1>
+            <h3>0% APR Available</h3>
+            <div class="bottom">
+                <button title="Order Now" type="button" class="btn btn-primary">Order Now</button>
+                <button title="Demo Drive" type="button" class="btn btn-light">Learn More</button>
+            </div>
+        </div>
+    </section>
+    <section style="background-image: url('images/BG-IMG 2.avif');">
+        <div class="content d-grid">
+            <h1>Model Y</h1>
+            <h3>0% APR Available</h3>
+            <div class="bottom">
+                <button title="Order Now" type="button" class="btn btn-primary">Order Now</button>
+                <button title="Demo Drive" type="button" class="btn btn-light">Learn More</button>
+            </div>
+        </div>
+    </section>
+    <section style="background-image: url('images/BG-IMG 3.avif');">
+        <div class="content d-grid">
+            <h1>Model X</h1>
+            <h3>From $65,990</h3>
+            <div class="bottom">
+                <button title="Order Now" type="button" class="btn btn-primary">Order Now</button>
+                <button title="Demo Drive" type="button" class="btn btn-light">Learn More</button>
+            </div>
+        </div>
+    </section>
+    <section style="background-image: url('images/BG-IMG 4.avif');">
+        <div class="content d-grid">
+            <h1>Model S</h1>
+            <h3>From $68,490</h3>
+            <div class="bottom">
+                <button title="Order Now" type="button" class="btn btn-primary">Order Now</button>
+                <button title="Demo Drive" type="button" class="btn btn-light">Learn More</button>
+            </div>
+        </div>
+    </section>
+    <section style="background-image: url('images/BG-IMG 5.avif');">
+        <div class="content d-grid">
+            <h1>Cybertruck</h1>
+            <h3>From $60,990</h3>
+            <div class="bottom">
+                <button title="Order Now" type="button" class="btn btn-primary">Order Now</button>
+                <button title="Demo Drive" type="button" class="btn btn-light">Learn More</button>
+            </div>
+        </div>
+    </section>
+    <section style="background-image: url('images/BG-IMG 6.avif');">
+        <div class="content d-grid">
+            <h1>Solar Panel</h1>
+            <h3>Schedule a Virtual Consultation</h3>
+            <div class="bottom">
+                <button title="Order Now" type="button" class="btn btn-primary">Order Now</button>
+                <button title="Demo Drive" type="button" class="btn btn-light">Learn More</button>
+            </div>
+        </div>
+    </section>
+    <section style="background-image: url('images/BG-IMG 7.avif');">
+        <div class="content d-grid">
+            <h1>Solar Roof</h1>
+            <h3>Produce Clean Energy From Your Roof</h3>
+            <div class="bottom">
+                <button title="Order Now" type="button" class="btn btn-primary">Order Now</button>
+                <button title="Demo Drive" type="button" class="btn btn-light">Learn More</button>
+            </div>
+        </div>
+    </section>
+    <section style="background-image: url('images/BG-IMG 8.avif');">
+        <div class="content d-grid">
+            <h1>Powerwall</h1>
+            <h3></h3>
+            <div class="bottom">
+                <button title="Order Now" type="button" class="btn btn-primary">Order Now</button>
+                <button title="Demo Drive" type="button" class="btn btn-light">Learn More</button>
+            </div>
+        </div>
+    </section>
+    <section style="background-image: url('images/BG-IMG 9.avif');">
+        <div class="content d-grid">
+            <h1>Accessories</h1>
+            <h3></h3>
+            <div class="bottom">
+                <button title="Order Now" type="button" class="btn btn-primary ">Shop Now</button>
+            
+            </div>
+        </div>
+    </section>
+
+    <!--footer section-->
+
+    <div class="footer">
+        <p>Price before estimated savings is $44,130, including Destination and Order Fees, but excluding taxes and
+            other fees. Subject to change. Vehicle shown has upgrades that will increase the price. Estimated savings
+            includes $5,000 in gas savings estimated over five years, the $7,500 Federal Tax Credit and state
+            incentives, available to eligible buyers and subject to MSRP caps. Model 3 Rear-Wheel Drive and leases not
+            eligible for the Federal Tax Credit. <span>Terms apply.</span>
+            <br>
+            <br>
+            2 Price before estimated savings is $46,630, including Destination and Order Fees, but excluding taxes and
+            other fees. Subject to change. Vehicle shown has upgrades that will increase the price. Estimated savings
+            includes $6,000 in gas savings estimated over five years, the $7,500 Federal Tax Credit and state
+            incentives, available to eligible buyers and subject to MSRP caps. Not all vehicles, customers or finance
+            options will be eligible. <span>Terms apply.</span>
+            <br>
+            <br>
+            3 Price before estimated savings is $81,630, including Destination and Order Fees, but excluding taxes and
+            other fees. Subject to change. Vehicle shown has upgrades that will increase the price. Estimated savings
+            includes $6,500 in gas savings estimated over five years, the $7,500 Federal Tax Credit and state
+            incentives, available to eligible buyers and subject to MSRP caps. Not all vehicles, customers or finance
+            options will be eligible. <span>Terms apply.</span>
+            <br>
+            <br>
+            4 Price before estimated savings is $76,630, including Destination and Order Fees, but excluding taxes and
+            other fees. Subject to change. Vehicle shown has upgrades that will increase the price. Estimated savings
+            includes $6,500 in gas savings estimated over five years and state incentives, available to eligible buyers
+            and subject to MSRP caps. Not all vehicles, customers or finance options will be eligible. <span>Terms
+                apply.</span>
+        </p>
+    </div>
+    <footer>
+        <p>Tesla © 2024</p>
+        <p>Privacy & Legal</p>
+        <p>Vehicle Recalls</p>
+        <p>Contact</p>
+        <p>News</p>
+        <p>Get Updates</p>
+        <p>Locations</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Two Numbers</title>
+</head>
+<body>
+    <h1>Sum of Two Numbers</h1>
+    <!-- Element where the result will be displayed -->
+    <div id="result"></div>
+
+    <script>
+        // Function to calculate the sum
+        function sum(a, b) {
+            return a + b;
+        }
+
+        // Calculate the sum of 5 and 10
+        let result = sum(5, 10);
+
+        // Get the element where the result will be displayed
+        let resultElement = document.getElementById('result');
+
+        // Display the result inside the 'result' div
+        resultElement.innerHTML = "The sum of 5 and 10 is: " + result;
+    </script>
+</body>
+</html>

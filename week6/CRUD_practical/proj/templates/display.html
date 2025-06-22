@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {% if messages %}
+      <ul>
+    {% for message in messages %}
+      <li class="{{ message.tags }}">{{ message }}</li>
+    {% endfor %}
+      </ul>
+    {% endif %} 
+    {% comment %} to show message of form submission {% endcomment %}
+
+    <h2>Welcome {{ username }}</h2>
+
+    <h2>All users</h2>
+    <a href="{% url 'home' %}">
+        <button style="margin-bottom: 10px;">Add User</button>
+    </a>
+    
+    <table border="1">
+        <tr>
+            <th>Field</th>
+            <th>Value</th>
+            <th>action</th>
+        </tr>
+        {% for user in users %}
+          <tr>
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+            <td>
+                <a href="{% url 'delete' user.id %}">delete</a>
+                <a href="{% url 'update' user.id %}">update</a>
+            </td>
+            
+          </tr>
+        {% endfor %}
+        
+    </table>
+</body>
+</html>

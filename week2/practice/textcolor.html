@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle Text Color</title>
+</head>
+<body>
+  <h1 id="text">Click the Button to Toggle Text Color</h1>
+  <button id="colorButton">Toggle Text Color</button>
+
+  <script>
+    const button = document.getElementById("colorButton");
+    const text = document.getElementById("text");
+
+    // Add click event listener to the button
+    button.addEventListener("click", () => {
+      // Check the current color of the text
+      if (text.style.color === "red") {
+        // Change back to the original color (black)
+        text.style.color = "black";
+      } else {
+        // Change the color to red
+        text.style.color = "red";
+      }
+    });
+  </script>
+</body>
+</html>
