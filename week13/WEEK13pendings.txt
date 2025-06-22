@@ -1,0 +1,29 @@
+WEEK 13:
+Implement recall and F1 score calculations.
+Visualize the confusion matrix for model evaluation.
+Handling Nan in Pandas dataframe
+N dimensional array - creation and operations
+Explore more on data slicing from nDim arrays, and visualization of Ndimension arrays
+Saving a matplot lib graph
+Pandas filtering,indexing
+Practice with different pandas functions
+Array slicing, Array operations 
+Use of ' : '
+Sliding window in array - without using any built in function
+Grouping, merging, reshaping, handling missing data.
+random.randInt shape
+slicing
+axis based operations
+Dimensional concept - numpy arrays
+count unique values
+Practice bivariate and multivariate analysis
+Data Types in python 
+indexing using numpy
+removing column and rows
+use jupyter notebook
+argmin(),argmax()
+Categorical encoding coding
+Multi indexing
+Pandas dataframe join - implementation
+categorical data encoding - one hot encoding 
+Filtering, indexing etc
