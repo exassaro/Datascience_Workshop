@@ -159,6 +159,31 @@ if result != -1:
     print(f"Element found at index {result}")
 else:
     print("Element not found")
+    
+    
+def count_digits(n):
+    if n == 0:
+        return 0
+    return 1 + count_digits(n // 10)
+
+def armstrong_recursive(n, power):
+    if n == 0:
+        return 0
+    digit = n % 10
+    return (digit ** power) + armstrong_recursive(n // 10, power)
+
+def is_armstrong(n):
+    power = count_digits(n)
+    return n == armstrong_recursive(n, power)
+
+# Test
+num = 153
+if is_armstrong(num):
+    print(f"{num} is an Armstrong number")
+else:
+    print(f"{num} is not an Armstrong number")
+
+    
 
 
 

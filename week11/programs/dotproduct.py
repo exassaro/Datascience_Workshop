@@ -1,4 +1,4 @@
-#Matrix multiplication(dot product)
+#Matrix multiplication
 
 def matrix_multiplication(A,B):
     rows_A,cols_A=len(A),len(A[0])

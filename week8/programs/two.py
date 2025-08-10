@@ -3,21 +3,21 @@ from ftplib import error_temp
 
 # SEARCH
 # Binary search
-# def binary(liss,target):
-#     left=0
-#     right=len(liss)-1
-#     while left<=right:
-#         mid=(left+right)//2
-#         if liss[mid]==target:
-#             return mid
-#         elif liss[mid]<target:
-#             left=mid+1
-#         else:
-#             right=mid-1
-#     return -1
-# liss1=[22,23,24,25,26,27,28]
-# target1=26
-# print(binary(liss1,target1))
+def binary(liss,target):
+    left=0
+    right=len(liss)-1
+    while left<=right:
+        mid=(left+right)//2
+        if liss[mid]==target:
+            return mid
+        elif liss[mid]<target:
+            left=mid+1
+        else:
+            right=mid-1
+    return -1
+liss1=[22,23,24,25,26,27,28]
+target1=26
+print(binary(liss1,target1))
 
 # Linear search
 # def linear(liss,target):
