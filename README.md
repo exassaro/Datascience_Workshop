@@ -8,23 +8,28 @@ Each week is documented in separate folders, containing notes, explanations, and
 
 ## 📅 Weekly Breakdown
 
-| Week | Focus Area | Description |
-|------|------------|-------------|
-| 1 | HTML & CSS | Created static websites using HTML and CSS |
-| 2 | HTML, CSS & JavaScript | Built dynamic websites with interactive JS |
-| 3 | Python (Domain Week) | Learned Python fundamentals and scripting |
-| 4 | SQL | Mastered basic SQL queries and relational concepts |
-| 5 | Django | Built full-stack web apps with Django |
-| 6 | Badge Week 1 | Revision of concepts from Domain week |
-| 7 | Preliminary Test & ML Basics | Basic Python & ML understanding check |
-| 8 | DSA 1 | Linked List and Searching Algorithms |
-| 9 | DSA 2 | Hash Tables, Stacks, Queues, Sorting Algorithms |
-| 10 | DSA 3 | Trees, Tries, BST, Heaps, Graphs & Search Algorithms |
-| 11 | Linear Algebra & Data Science | Linear algebra and foundational DS concepts |
-| 12 | Statistics & Probability | Core stats for data analysis & ML |
-| 13 | Pandas, NumPy, Matplotlib | Hands-on with data wrangling and visualization |
-| 14 | Badge Week 2 | Review + ML Algorithms & Seaborn |
-| 15 | EDA & Git | Exploratory Data Analysis and Git fundamentals |
+| Week | Focus Area                           | Description                                                                                                                                             |
+| ---- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1    | HTML & CSS                           | Created static websites using HTML and CSS                                                                                                              |
+| 2    | HTML, CSS & JavaScript               | Built dynamic websites with interactive JS                                                                                                              |
+| 3    | Python (Domain Week)                 | Learned Python fundamentals and scripting                                                                                                               |
+| 4    | SQL                                  | Mastered basic SQL queries and relational concepts                                                                                                      |
+| 5    | Django                               | Built full-stack web apps with Django                                                                                                                   |
+| 6    | Badge Week 1                         | Revision of concepts from Domain week                                                                                                                   |
+| 7    | Preliminary Test & ML Basics         | Basic Python & ML understanding check                                                                                                                   |
+| 8    | DSA 1                                | Linked List and Searching Algorithms                                                                                                                    |
+| 9    | DSA 2                                | Hash Tables, Stacks, Queues, Sorting Algorithms                                                                                                         |
+| 10   | DSA 3                                | Trees, Tries, BST, Heaps, Graphs & Search Algorithms                                                                                                    |
+| 11   | Linear Algebra & Data Science        | Linear algebra and foundational DS concepts                                                                                                             |
+| 12   | Statistics & Probability             | Core stats for data analysis & ML                                                                                                                       |
+| 13   | Pandas, NumPy, Matplotlib            | Hands-on with data wrangling and visualization                                                                                                          |
+| 14   | Badge Week 2                         | Review + ML Algorithms & Seaborn                                                                                                                        |
+| 15   | EDA & Git                            | Exploratory Data Analysis and Git fundamentals                                                                                                          |
+| 16   | Feature Engineering & Classification | Feature selection/engineering, Logistic Regression, Naive Bayes, K-Nearest Neighbors                                                                    |
+| 17   | Advanced Classification              | Decision Tree Classifier, Random Forest, SVM, Classification Metrics, Model Saving (joblib/pickle), Hyperparameter Tuning (Random Search & Grid Search) |
+| 18   | Regression Fundamentals              | Regression concepts, Linear & Multiple Regression, Decision Tree Regression, Ridge Regression                                                           |
+| 19   | Advanced Regression & Clustering     | Lasso Regression, Polynomial Regression, SVR, Regression Metrics, Clustering (K-means, DBSCAN, others), Ensemble Techniques (Boosting & Bagging)        |
+
 
 ---
 
